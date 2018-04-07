@@ -80,6 +80,14 @@ public class ArrayStackTest {
     assertTrue(s.isEmpty());
   }
 
+  @Test
+  public void peekReturnsCorrectValue() throws Exception {
+    ArrayStack<String> s = new ArrayStack<>();
+    s.push("hello");
+    s.push("world");
+    assertEquals("world", s.peek());
+  }
+
   @Test(expected = Exception.class)
   public void peekOnEmptyStackThrowsException() throws Exception {
     ArrayStack<String> s = new ArrayStack<>();
