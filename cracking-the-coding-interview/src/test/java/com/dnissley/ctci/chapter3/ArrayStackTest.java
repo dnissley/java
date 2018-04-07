@@ -55,7 +55,7 @@ public class ArrayStackTest {
 
   @Test
   public void largeStackWorksAsExpected() throws Exception {
-    ArrayStack<String> s = new ArrayStack<>();
+    ArrayStack<String> s = new ArrayStack<>(2);
     for (int i = 0; i < 100; i++) {
       s.push(Integer.toString(i));
       assertEquals(Integer.toString(i), s.peek());
